@@ -13,6 +13,8 @@ async function capture() {
   });
   const page = await browser.newPage();
   await page.goto(`file://${import.meta.dirname}/title.html`);
+
+  const recorder = await page.screencast({ path: 'title.webm' });
   await setTimeout(3000);
 
   await page.evaluate(() => {
@@ -29,6 +31,7 @@ async function capture() {
 
   await setTimeout(3000);
 
+  await recorder.stop();
   await page.close();
   await browser.close();
 }
