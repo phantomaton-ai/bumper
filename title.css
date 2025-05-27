@@ -1,0 +1,76 @@
+/* title.css */
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Workbench:BLED,SCAN@0..100,-53..100&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #0F0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+.container {
+  position: relative;
+}
+
+.phantomaton {
+  font-family: 'Workbench', sans-serif;
+  font-size: 8rem; /* Adjust as needed */
+  font-style: normal;
+  line-height: 1.25;
+  text-shadow: 0rem 0rem 1rem black;
+  /* Add flicker styles */
+  animation: flicker 0.2s infinite;
+}
+
+@keyframes flicker {
+  0%   {
+    text-shadow: 0rem 0rem 0.55rem #0F0;
+    font-variation-settings: "BLED" 12, "SCAN" -12;
+  }
+  15%  {
+    text-shadow: 0rem 0rem 0.58rem #0F0;
+    font-variation-settings: "BLED" 13, "SCAN" -11;
+  }
+  25%  {
+    text-shadow: 0rem 0rem 0.6rem #0F0;
+    font-variation-settings: "BLED" 14, "SCAN" -10;
+  }
+  35%  {
+    text-shadow: 0rem 0rem 0.62rem #0F0;
+    font-variation-settings: "BLED" 14, "SCAN" -9;
+  }
+  45%  {
+    text-shadow: 0rem 0rem 0.65rem #0F0;
+    font-variation-settings: "BLED" 15, "SCAN" -8;
+  }
+  55%  {
+    text-shadow: 0rem 0rem 0.4rem #0F0;
+    font-variation-settings: "BLED" 8, "SCAN" -18;
+  }
+  65%  {
+    text-shadow: 0rem 0rem 0.63rem #0F0;
+    font-variation-settings: "BLED" 15, "SCAN" -7;
+  }
+  75%  {
+    text-shadow: 0rem 0rem 0.61rem #0F0;
+    font-variation-settings: "BLED" 14, "SCAN" -8;
+  }
+  85%  {
+    text-shadow: 0rem 0rem 0.59rem #0F0;
+    font-variation-settings: "BLED" 13, "SCAN" -9;
+  }
+  95%  {
+    text-shadow: 0rem 0rem 0.57rem #0F0;
+    font-variation-settings: "BLED" 13, "SCAN" -10;
+  }
+  100% {
+    text-shadow: 0rem 0rem 0.55rem #0F0;
+    font-variation-settings: "BLED" 12, "SCAN" -12;
+  }
+}
