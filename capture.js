@@ -1,6 +1,6 @@
-const puppeteer = require('puppeteer');
+import puppeteer from 'puppeteer';
 
-async function captureVideo() {
+async function capture() {
   const browser = await puppeteer.launch({
     headless: "new",
     defaultViewport: {
@@ -24,11 +24,11 @@ async function captureVideo() {
       document.body.style.transition = 'opacity 2s';
       document.body.style.opacity = '0';
   });
-  
+
   await page.waitForTimeout(2000); // Wait 2 seconds for fade out
 
   await page.close();
   await browser.close();
 }
 
-captureVideo();
+capture();
