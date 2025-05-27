@@ -1,3 +1,4 @@
+import path from 'path';
 import puppeteer from 'puppeteer';
 
 async function capture() {
@@ -10,7 +11,7 @@ async function capture() {
     args: ['--use-gl=egl']
   });
   const page = await browser.newPage();
-  await page.goto(`file://${__dirname}/title.html`);
+  await page.goto(`file://${import.meta.dirname}/title.html`);
   await page.waitForTimeout(3000); // Wait 3 seconds before fade in
 
   await page.evaluate(() => {
